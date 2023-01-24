@@ -1,0 +1,28 @@
+p{
+    text-align: center;
+    margin: 50px auto ;
+    width: fit-content;
+    font-size: 100px;
+    font-family: Arial, tahoma;
+    -webkit-text-fill-color:white ;
+    -webkit-text-stroke:1px black ;
+    position: relative;
+}
+p::before{
+    content: attr(data-word);
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: orangered;
+    width: 0%;
+    white-space: nowrap;
+    transition: 1s;
+
+}
+
+p:hover::before{
+    left: 0;
+    top: 0;
+    width: 100%;
+}

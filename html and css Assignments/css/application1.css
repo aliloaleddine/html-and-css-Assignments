@@ -1,0 +1,39 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes turn {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.extern {
+    width: 100px;
+    height: 100px;
+    border-top: 4px solid #4392ed;
+    border-right: 4px solid #4392ed;
+    border-bottom: 4px dotted #4392ed;
+    border-left: 4px dotted #4392ed;
+    border-radius: 50%;
+    animation: turn 2s linear 0s infinite normal;
+    -webkit-animation: turn 2s linear 0s infinite normal;
+}
+
+.intern{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-top: 4px dotted #007f81;
+    border-right: 4px solid #007f81;
+    border-bottom: 4px dotted #007f81;
+    border-left: 4px solid #007f81;
+    animation: turn 2s linear 0s infinite reverse;
+    -webkit-animation: turn 2s linear 0s infinite reverse;
+    border-radius: 50%;
+
+}

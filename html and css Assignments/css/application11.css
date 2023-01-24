@@ -1,0 +1,47 @@
+button {
+    margin: 200px auto;
+    padding: 20px 50px;
+    display: block;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button::before {
+    content: attr(data-message);
+    width: 300px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: -72px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+}
+
+button::after {
+    content: " ";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    clip-path: polygon(50% 50%, 100% 0%, 0% 0%);
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    z-index: -1;
+}
+
+button:hover {
+    overflow: visible;
+}
+
+button:hover::before,
+button:hover::after {
+    opacity: 1;
+    transition: 0.3s;
+
+}

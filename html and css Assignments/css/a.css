@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@keyframes turn {
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+.ap1 {
+    width: 99px;
+    height: 99px;
+    margin: 200px auto;
+    background-color: #ddd;
+    list-style: none;
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 4px 6px 4px 3px #ddd; */
+    animation: turn 2s linear 0s infinite normal;
+    -webkit-animation: turn 2s linear 0s infinite normal;
+}
+
+.ap1 li {
+    width: 100%;
+    height: 16.5px;
+    background-size: 33px;
+    background-repeat: repeat-x;
+}
+
+.ap1 li:nth-child(2n+1) {
+    background-image: linear-gradient(to right, black 50%, white 50%);
+    background-repeat: repeat-x;
+}
+
+.ap1 li:nth-child(2n) {
+    background-image: linear-gradient(to right, white 50% , black 50%);
+   
+}

@@ -1,0 +1,50 @@
+form {
+    width: 400px;
+    background-color: #faf9fa;
+    margin: 20px auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+form div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+form div input {
+    appearance: none;
+    border: 1px solid #0071ff;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    position: relative;
+}
+
+form div input::before {
+    content: " ";
+    width: 80%;
+    height: 80%;
+    background-color: #0071ff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+
+}
+
+form div input:checked::before {
+    opacity: 1;
+}
+
+form div input:checked~label {
+    color: #0071ff;
+}
+
+form div input:hover:not(:checked):before {
+    opacity: 0.3;
+
+}

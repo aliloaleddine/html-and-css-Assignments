@@ -1,0 +1,33 @@
+.ap1 {
+    margin: 200px auto;
+    width: 100px;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.ap1 span {
+    width: 100%;
+    height: 10px;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+    transition: 0.3s;
+}
+
+.ap1:hover span {
+    background-color: red;
+}
+
+.ap1:hover span:first-child {
+    transform: translateY(20px)rotate(45deg);
+}
+
+.ap1:hover span:nth-child(2) {
+ opacity: 0;
+}
+
+.ap1:hover span:last-child {
+    transform: translateY(-20px)rotate(-45deg);
+}

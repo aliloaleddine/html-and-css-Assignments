@@ -1,0 +1,38 @@
+body {
+    background-color: black;
+}
+
+
+@keyframes write{
+    for{
+        width: 0px;
+    }
+    to{
+        width: 203px;
+
+    }
+}
+@keyframes border{
+    for{
+        border-color: white;
+    }
+    to{
+        border-color: transparent;
+
+    }
+}
+p {
+    margin: 200px auto;
+    color: white;
+    width:0px;
+    height: 58px;
+    font-size: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left: 1px solid white;
+    animation: write 3s steps(11) 2s both ,border 1s infinite;
+    direction: rtl;
+
+}
+
+
